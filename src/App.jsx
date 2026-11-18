@@ -6,12 +6,11 @@ const projects = [
     name: 'CRPAS',
     type: 'Climate-aware agriculture',
     description:
-      'A climate-aware farming platform combining GPS-based farm mapping and live weather data with AI-generated crop advice, delivered by dashboard, SMS, and email.',
-    tags: ['Python', 'Django', 'PostgreSQL', 'GIS'],
+      'A Django platform for Kenyan farmers with GPS farm profiles, Open-Meteo weather and soil data, Groq-generated planting advice, and risk alerts delivered by web, email, and SMS.',
+    tags: ['Python', 'Django', 'PostgreSQL', 'Open-Meteo', 'Groq', 'GIS'],
     visual: 'agriculture',
     artwork: {
       label: 'CLIMATE / FIELD INSIGHTS',
-      index: '01-03',
       overline: 'CLIMATE-READY FARMING',
       title: 'Turn local data into farm advice.',
       steps: ['Map farm', 'Assess conditions', 'Get crop advice'],
@@ -20,14 +19,13 @@ const projects = [
   {
     number: '02',
     name: 'SMS Gateway',
-    type: 'Desktop · Android messaging',
+    type: 'Desktop · Android SMS',
     description:
-      'A desktop app that connects to an Android phone to send SMS locally, with a built-in message queue, secure device pairing, and delivery tracking.',
-    tags: ['TypeScript', 'Electron', 'React Native', 'Kotlin'],
+      'A local-first desktop and Android app for spreadsheet-based SMS campaigns, with QR device pairing, a persistent message queue, and carrier delivery reports.',
+    tags: ['TypeScript', 'Electron', 'React Native', 'Kotlin', 'SQLite'],
     visual: 'sms',
     artwork: {
       label: 'LOCAL / MOBILE MESSAGING',
-      index: '02-03',
       overline: 'ANDROID SMS GATEWAY',
       title: 'Send messages from your desktop.',
       steps: ['Pair device', 'Queue messages', 'Track delivery'],
@@ -38,15 +36,29 @@ const projects = [
     name: 'E-commerce System',
     type: 'Online store · Payments & shipping',
     description:
-      'A Django storefront with customer accounts, Google sign-in, Stripe payments, and Shippo shipping rates, labels, and tracking.',
-    tags: ['Python', 'Django', 'Stripe', 'Shippo'],
+      'A Django storefront with customer accounts, Google sign-in, vendor inventory, and a Redis-backed catalog, plus Stripe payments and Shippo shipping.',
+    tags: ['Python', 'Django', 'MySQL', 'Redis', 'Stripe', 'Shippo'],
     visual: 'commerce',
     artwork: {
       label: 'SHOP / PAYMENTS / DELIVERY',
-      index: '03-03',
       overline: 'E-COMMERCE',
       title: 'From product to delivery.',
       steps: ['Browse products', 'Pay securely', 'Track shipment'],
+    },
+  },
+  {
+    number: '04',
+    name: 'MatchCV',
+    type: 'Resume parsing · Candidate tools',
+    description:
+      'A React and TypeScript workspace with an Express API for verified accounts, PDF/DOCX resume parsing, Gemini-generated structured drafts, and saved resume previews.',
+    tags: ['React', 'TypeScript', 'Express', 'MongoDB', 'Gemini'],
+    visual: 'matchcv',
+    artwork: {
+      label: 'RESUME / PARSING / DRAFT',
+      overline: 'RESUME PARSING',
+      title: 'Turn a resume into a structured draft.',
+      steps: ['Create account', 'Parse resume', 'Review draft'],
     },
   },
 ]
@@ -74,7 +86,7 @@ function ProjectArtwork({ project }) {
       <div className="artwork-window">
         <div className="artwork-header">
           <span>{project.artwork.label}</span>
-          <span>{project.artwork.index}</span>
+          <span>{project.number}-{String(projects.length).padStart(2, '0')}</span>
         </div>
         <div className="artwork-content">
           <span className="artwork-overline">{project.artwork.overline}</span>
@@ -97,7 +109,7 @@ function ProjectCard({ project }) {
   return (
     <article className={`project-card project-card--${project.visual}`}>
       <div className={`project-preview preview--${project.visual}`}>
-        <span className="preview-number">{project.number} / 03</span>
+        <span className="preview-number">{project.number} / {String(projects.length).padStart(2, '0')}</span>
         <p className="preview-description">{project.description}</p>
         <ProjectArtwork project={project} />
       </div>
@@ -131,7 +143,7 @@ function App() {
             rel="noopener noreferrer">
             Resume
           <ArrowIcon diagonal /></a>
-          <a href="#work">Work <span>03</span></a>
+          <a href="#work">Work <span>{String(projects.length).padStart(2, '0')}</span></a>
           <a href="#experience">Experience</a>
           <a href="#about">About</a>
           <a className="nav-contact" href="mailto:samuelthaka9@gmail.com">Get in touch <ArrowIcon diagonal /></a>
@@ -213,11 +225,11 @@ function App() {
           </div>
           <div className="skill-group">
             <h3>Backend & mobile</h3>
-            <p>Python, Django, Flask, Node.js, React Native, Electron, Kotlin</p>
+            <p>Python, Django, Flask, Node.js, Express, React Native, Electron, Kotlin</p>
           </div>
           <div className="skill-group">
             <h3>Databases & tools</h3>
-            <p>PostgreSQL, MySQL, Git, GitHub, Docker, Postman, API integration</p>
+            <p>PostgreSQL, MySQL, MongoDB, Redis, SQLite, Git, GitHub, Docker, Kubernetes, Postman, API integration</p>
           </div>
         </div>
       </section>
