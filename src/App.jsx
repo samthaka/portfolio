@@ -110,7 +110,9 @@ function ProjectCard({ project }) {
     <article className={`project-card project-card--${project.visual}`}>
       <div className={`project-preview preview--${project.visual}`}>
         <span className="preview-number">{project.number} / {String(projects.length).padStart(2, '0')}</span>
+        <br />
         <p className="preview-description">{project.description}</p>
+        <br />
         <ProjectArtwork project={project} />
       </div>
       <div className="project-info">
@@ -152,10 +154,10 @@ function App() {
 
       <section className="hero page-wrap" id="home">
         <div className="hero-copy">
-          <div className="eyebrow">FULL-STACK DEVELOPMENT <span className="eyebrow-divider">/</span> IT SUPPORT</div>
-          <h2>Building useful<br />digital <span className="hero-highlight">tools<span className="hero-period">.</span></span></h2>
+          <div className="eyebrow">FULL-STACK DEVELOPMENT <span className="eyebrow-divider">/</span> DevOps</div>
+          <h2>Building secure<br />viable <span className="hero-highlight">systems<span className="hero-period">.</span></span></h2>
           <div className="hero-bottom">
-            <p>I&apos;m Samuel Thaka, a versatile fullstack software developer and DevOps engineer focused on practical software solutions and reliable technology.</p>
+            <p>Hello, I&apos;m Samuel Thaka, a versatile fullstack software developer and DevOps engineer adept in building fullstack applications.</p>
             <a href="#work" className="text-link">Explore my work <ArrowIcon /></a>
           </div>
         </div>

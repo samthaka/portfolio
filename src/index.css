@@ -3,7 +3,7 @@
 :root {
   font-family: 'DM Sans', sans-serif;
   color: #e9e9e2;
-  background: #161715;
+  background: #15191f;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -11,13 +11,14 @@
   font-optical-sizing: auto;
   font-weight: 400;
 
-  --bg: #161715;
-  --panel: #1d1e1b;
-  --panel-border: #30312d;
+  --bg: #15191f;
+  --panel: #1b2028;
+  --panel-border: #303946;
   --text: #e9e9e2;
-  --muted: #9b9d94;
-  --faint: #6f7169;
-  --lime: #d4fa62;
+  --muted: #9da7b5;
+  --faint: #707b8a;
+  --lime: #b9cbed;
+  --lime-deep: #7f94b5;
   --mono: 'DM Mono', monospace;
 }
 
