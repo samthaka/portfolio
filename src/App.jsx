@@ -157,7 +157,7 @@ function App() {
           <div className="eyebrow">FULL-STACK DEVELOPMENT <span className="eyebrow-divider">/</span> DevOps</div>
           <h2>Building secure<br />viable <span className="hero-highlight">systems<span className="hero-period">.</span></span></h2>
           <div className="hero-bottom">
-            <p>Hello, I&apos;m Samuel Thaka, a versatile fullstack software developer and DevOps engineer adept in building fullstack applications.</p>
+            <p>Hello, I&apos;m Samuel Thaka, a versatile full-stack software developer and DevOps engineer adept in building full-stack applications.</p>
             <a href="#work" className="text-link">Explore my work <ArrowIcon /></a>
           </div>
         </div>
@@ -222,16 +222,28 @@ function App() {
         </div>
         <div className="skills-grid">
           <div className="skill-group">
+            <h3>Languages</h3>
+            <p>Python, JavaScript, TypeScript, SQL, Kotlin</p>
+          </div>
+          <div className="skill-group">
             <h3>Frontend</h3>
-            <p>React, Bootstrap, JavaScript, TypeScript, HTML, CSS</p>
+            <p>React, Bootstrap, HTML, CSS</p>
           </div>
           <div className="skill-group">
             <h3>Backend & mobile</h3>
-            <p>Python, Django, Flask, Node.js, Express, React Native, Electron, Kotlin</p>
+            <p>Django, Flask, Node.js, Express</p>
           </div>
           <div className="skill-group">
-            <h3>Databases & tools</h3>
-            <p>PostgreSQL, MySQL, MongoDB, Redis, SQLite, Git, GitHub, Docker, Kubernetes, Postman, API integration</p>
+            <h3>Mobile & Desktop</h3>
+            <p>React Native, Electron</p>
+          </div>
+          <div className="skill-group">
+            <h3>Databases</h3>
+            <p>PostgreSQL, MySQL, MongoDB, Redis, SQLite</p>
+          </div>
+          <div className="skill-group">
+            <h3>Cloud Services & Tools</h3>
+            <p>AWS, GCP, Git, GitHub, Docker, Kubernetes, Postman, API integration</p>
           </div>
         </div>
       </section>
