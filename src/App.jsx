@@ -230,7 +230,7 @@ function App() {
             <p>React, Bootstrap, HTML, CSS</p>
           </div>
           <div className="skill-group">
-            <h3>Backend & mobile</h3>
+            <h3>Backend</h3>
             <p>Django, Flask, Node.js, Express</p>
           </div>
           <div className="skill-group">
@@ -238,11 +238,11 @@ function App() {
             <p>React Native, Electron</p>
           </div>
           <div className="skill-group">
-            <h3>Databases</h3>
+            <h3>Databases & Caching</h3>
             <p>PostgreSQL, MySQL, MongoDB, Redis, SQLite</p>
           </div>
           <div className="skill-group">
-            <h3>Cloud Services & Tools</h3>
+            <h3>Cloud Services & DevOps Tools</h3>
             <p>AWS, GCP, Git, GitHub, Docker, Kubernetes, Postman, API integration</p>
           </div>
         </div>
